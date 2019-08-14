@@ -19,28 +19,28 @@ var _jsxFileName = "/Users/robinhuy/Desktop/github/nextjs-ecommerce-store/nextsh
 
 function Header() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
-    "class": "header1",
+    className: "header1",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 5
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "container-menu-header",
+    className: "container-menu-header",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "topbar",
+    className: "topbar",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "topbar-social",
+    className: "topbar-social",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8
@@ -48,7 +48,7 @@ function Header() {
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
-    "class": "topbar-social-item fa fa-facebook",
+    className: "topbar-social-item fa fa-facebook",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
@@ -56,7 +56,7 @@ function Header() {
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
-    "class": "topbar-social-item fa fa-instagram",
+    className: "topbar-social-item fa fa-instagram",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
@@ -64,7 +64,7 @@ function Header() {
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
-    "class": "topbar-social-item fa fa-pinterest-p",
+    className: "topbar-social-item fa fa-pinterest-p",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 11
@@ -72,7 +72,7 @@ function Header() {
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
-    "class": "topbar-social-item fa fa-snapchat-ghost",
+    className: "topbar-social-item fa fa-snapchat-ghost",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12
@@ -80,42 +80,42 @@ function Header() {
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
-    "class": "topbar-social-item fa fa-youtube-play",
+    className: "topbar-social-item fa fa-youtube-play",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    "class": "topbar-child1",
+    className: "topbar-child1",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 16
     },
     __self: this
   }, "Free shipping for standard order over $100"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "topbar-child2",
+    className: "topbar-child2",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 20
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    "class": "topbar-email",
+    className: "topbar-email",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 21
     },
     __self: this
   }, "fashe@example.com"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "topbar-language rs1-select2",
+    className: "topbar-language rs1-select2",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 25
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
-    "class": "selection-1",
+    className: "selection-1",
     name: "time",
     __source: {
       fileName: _jsxFileName,
@@ -135,7 +135,7 @@ function Header() {
     },
     __self: this
   }, "EUR"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "wrap_header",
+    className: "wrap_header",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 34
@@ -143,14 +143,14 @@ function Header() {
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "index.html",
-    "class": "logo",
+    className: "logo",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 35
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "images/icons/logo.png",
+    src: "/static/images/icons/logo.png",
     alt: "IMG-LOGO",
     __source: {
       fileName: _jsxFileName,
@@ -158,21 +158,21 @@ function Header() {
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "wrap_menu",
+    className: "wrap_menu",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 39
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
-    "class": "menu",
+    className: "menu",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 40
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-    "class": "main_menu",
+    className: "main_menu",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 41
@@ -192,7 +192,7 @@ function Header() {
     },
     __self: this
   }, "Home"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-    "class": "sub_menu",
+    className: "sub_menu",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 44
@@ -251,7 +251,7 @@ function Header() {
     },
     __self: this
   }, "Shop")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    "class": "sale-noti",
+    className: "sale-noti",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 55
@@ -317,7 +317,7 @@ function Header() {
     },
     __self: this
   }, "Contact"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "header-icons",
+    className: "header-icons",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 78
@@ -325,15 +325,15 @@ function Header() {
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
-    "class": "header-wrapicon1 dis-block",
+    className: "header-wrapicon1 dis-block",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 79
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "images/icons/icon-header-01.png",
-    "class": "header-icon1",
+    src: "/static/images/icons/icon-header-01.png",
+    className: "header-icon1",
     alt: "ICON",
     __source: {
       fileName: _jsxFileName,
@@ -341,22 +341,22 @@ function Header() {
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    "class": "linedivide1",
+    className: "linedivide1",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 83
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "header-wrapicon2",
+    className: "header-wrapicon2",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 85
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "images/icons/icon-header-02.png",
-    "class": "header-icon1 js-show-header-dropdown",
+    src: "/static/images/icons/icon-header-02.png",
+    className: "header-icon1 js-show-header-dropdown",
     alt: "ICON",
     __source: {
       fileName: _jsxFileName,
@@ -364,42 +364,42 @@ function Header() {
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    "class": "header-icons-noti",
+    className: "header-icons-noti",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 87
     },
     __self: this
   }, "0"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "header-cart header-dropdown",
+    className: "header-cart header-dropdown",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 89
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-    "class": "header-cart-wrapitem",
+    className: "header-cart-wrapitem",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 90
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    "class": "header-cart-item",
+    className: "header-cart-item",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 91
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "header-cart-item-img",
+    className: "header-cart-item-img",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 92
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "images/item-cart-01.jpg",
+    src: "/static/images/item-cart-01.jpg",
     alt: "IMG",
     __source: {
       fileName: _jsxFileName,
@@ -407,7 +407,7 @@ function Header() {
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "header-cart-item-txt",
+    className: "header-cart-item-txt",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 96
@@ -415,35 +415,35 @@ function Header() {
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
-    "class": "header-cart-item-name",
+    className: "header-cart-item-name",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 97
     },
     __self: this
   }, "White Shirt With Pleat Detail Back"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    "class": "header-cart-item-info",
+    className: "header-cart-item-info",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 101
     },
     __self: this
   }, "1 x $19.00"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    "class": "header-cart-item",
+    className: "header-cart-item",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 107
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "header-cart-item-img",
+    className: "header-cart-item-img",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 108
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "images/item-cart-02.jpg",
+    src: "/static/images/item-cart-02.jpg",
     alt: "IMG",
     __source: {
       fileName: _jsxFileName,
@@ -451,7 +451,7 @@ function Header() {
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "header-cart-item-txt",
+    className: "header-cart-item-txt",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 112
@@ -459,35 +459,35 @@ function Header() {
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
-    "class": "header-cart-item-name",
+    className: "header-cart-item-name",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 113
     },
     __self: this
   }, "Converse All Star Hi Black Canvas"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    "class": "header-cart-item-info",
+    className: "header-cart-item-info",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 117
     },
     __self: this
   }, "1 x $39.00"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    "class": "header-cart-item",
+    className: "header-cart-item",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 123
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "header-cart-item-img",
+    className: "header-cart-item-img",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 124
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "images/item-cart-03.jpg",
+    src: "/static/images/item-cart-03.jpg",
     alt: "IMG",
     __source: {
       fileName: _jsxFileName,
@@ -495,7 +495,7 @@ function Header() {
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "header-cart-item-txt",
+    className: "header-cart-item-txt",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 128
@@ -503,35 +503,35 @@ function Header() {
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
-    "class": "header-cart-item-name",
+    className: "header-cart-item-name",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 129
     },
     __self: this
   }, "Nixon Porter Leather Watch In Tan"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    "class": "header-cart-item-info",
+    className: "header-cart-item-info",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 133
     },
     __self: this
   }, "1 x $17.00")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "header-cart-total",
+    className: "header-cart-total",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 140
     },
     __self: this
   }, "Total: $75.00"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "header-cart-buttons",
+    className: "header-cart-buttons",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 144
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "header-cart-wrapbtn",
+    className: "header-cart-wrapbtn",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 145
@@ -539,14 +539,14 @@ function Header() {
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "cart.html",
-    "class": "flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4",
+    className: "flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 146
     },
     __self: this
   }, "View Cart")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "header-cart-wrapbtn",
+    className: "header-cart-wrapbtn",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 151
@@ -554,7 +554,7 @@ function Header() {
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
-    "class": "flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4",
+    className: "flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 152
@@ -578,21 +578,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Header */ "./components/Header.js");
+/* harmony import */ var _static_fonts_font_awesome_4_7_0_css_font_awesome_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../static/fonts/font-awesome-4.7.0/css/font-awesome.css */ "./static/fonts/font-awesome-4.7.0/css/font-awesome.css");
+/* harmony import */ var _static_fonts_font_awesome_4_7_0_css_font_awesome_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_static_fonts_font_awesome_4_7_0_css_font_awesome_css__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _static_css_main_min_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../static/css/main.min.css */ "./static/css/main.min.css");
+/* harmony import */ var _static_css_main_min_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_static_css_main_min_css__WEBPACK_IMPORTED_MODULE_3__);
 var _jsxFileName = "/Users/robinhuy/Desktop/github/nextjs-ecommerce-store/nextshop/components/Layout.js";
 
- // import '../css/main.css'
+
+
 
 function Layout(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 9
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 10
     },
     __self: this
   }), props.children);
@@ -10580,5 +10585,5 @@ module.exports = dll_01f9a3fa864a7b7414d8;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js"]]]);
+},[[0,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=index.js.map
