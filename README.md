@@ -1,1 +1,1 @@
-# nextjs-ecommerce-website
+# nextjs-ecommerce-store
