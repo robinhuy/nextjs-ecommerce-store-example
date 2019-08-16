@@ -1,4 +1,4 @@
-import Layout from '../components/frontend/Layout'
+import Layout from '../components/admin/Layout.js'
 
 export default function Home() {
   return (
