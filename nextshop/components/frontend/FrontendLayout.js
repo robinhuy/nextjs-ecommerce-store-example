@@ -8,7 +8,7 @@ import '../../static/css/hamburgers.min.css'
 import '../../static/css/main.min.css'
 import '../../static/css/util.min.css'
 
-export default function Layout(props) {
+export default function FrontendLayout(props) {
   return (
     <div>
       <Header />

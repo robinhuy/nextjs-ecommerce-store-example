@@ -1,9 +1,9 @@
-import Layout from '../../components/admin/Layout.js'
+import AdminLayout from '../../components/admin/AdminLayout'
 
 export default function Home() {
   return (
-    <Layout>
+    <AdminLayout>
       Dashboard
-    </Layout>
+    </AdminLayout>
   )
 }

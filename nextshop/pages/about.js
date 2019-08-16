@@ -1,8 +1,8 @@
-import Layout from '../components/frontend/Layout'
+import FrontendLayout from '../components/frontend/FrontendLayout'
 
 export default function About() {
   return (
-    <Layout>
+    <FrontendLayout>
       <main>
         <section className="bg-title-page p-t-40 p-b-50 flex-col-c-m" style={{ backgroundImage: 'url(/static/images/heading-pages-06.jpg)' }}>
           <h2 className="l-text2 t-center">
@@ -43,6 +43,6 @@ export default function About() {
           </div>
         </section>
       </main>
-    </Layout>
+    </FrontendLayout>
   )
 }

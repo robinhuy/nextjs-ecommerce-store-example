@@ -1,8 +1,8 @@
-import Layout from '../components/frontend/Layout'
+import FrontendLayout from '../components/frontend/FrontendLayout'
 
 export default function Home() {
   return (
-    <Layout>
+    <FrontendLayout>
       <main>
         <section className="banner bgwhite p-t-40 p-b-40">
           <div className="container">
@@ -386,6 +386,6 @@ export default function Home() {
         </section>
       </main>
 
-    </Layout>
+    </FrontendLayout>
   )
 }
