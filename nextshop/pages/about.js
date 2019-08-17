@@ -1,4 +1,4 @@
-import FrontendLayout from '../components/frontend/FrontendLayout'
+import FrontendLayout from 'components/frontend/FrontendLayout'
 
 export default function About() {
   return (

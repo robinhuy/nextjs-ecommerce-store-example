@@ -1,11 +1,13 @@
 /* eslint-disable */
 const withCss = require('@zeit/next-css')
+const path = require('path')
 
 module.exports = withCss({
   webpack: (config, { isServer }) => {
     if (isServer) {
       const antStyles = /antd\/.*?\/style\/css.*?/
       const origExternals = [...config.externals]
+
       config.externals = [
         (context, request, callback) => {
           if (request.match(antStyles)) return callback()
@@ -23,6 +25,10 @@ module.exports = withCss({
         use: 'null-loader',
       })
     }
+
+    // Allow import module relative to the app root
+    config.resolve.modules.push(path.resolve('./'))
+
     return config
   },
 })
