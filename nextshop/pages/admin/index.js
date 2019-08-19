@@ -1,11 +1,7 @@
-import { Breadcrumb } from 'antd';
-
-import AdminLayout from 'components/admin/AdminLayout'
+import AdminLayout from 'components/admin/AdminLayout';
 
 export default function Home() {
-  return (
-    <AdminLayout>
-      Dashboard
-    </AdminLayout>
-  )
+  const breadcrumb = [{ title: 'Dashboard' }];
+
+  return <AdminLayout breadcrumb={breadcrumb}>Dashboard</AdminLayout>;
 }

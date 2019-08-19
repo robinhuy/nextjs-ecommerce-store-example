@@ -1,12 +1,16 @@
-import { Layout, Breadcrumb } from 'antd';
-import AdminLayout from 'components/admin/AdminLayout'
-
-const { Header, Content, Footer } = Layout;
+import AdminLayout from 'components/admin/AdminLayout';
+import Link from 'next/link';
 
 export default function Home() {
+  const breadcrumb = [{ title: 'Users' }];
+
   return (
-    <AdminLayout>
-      Users
+    <AdminLayout breadcrumb={breadcrumb}>
+      <h1>Users</h1>
+      
+      <Link href="/admin/users/[id]" as="/admin/users/1">
+        <a>Detail</a>
+      </Link>
     </AdminLayout>
-  )
+  );
 }

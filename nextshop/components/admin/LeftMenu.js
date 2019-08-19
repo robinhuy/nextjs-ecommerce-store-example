@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 import { withRouter } from 'next/router';
 import { Layout, Menu, Icon } from 'antd';
 import { adminPath } from 'nextshop.config';
@@ -25,24 +24,14 @@ const LeftMenu = ({ router }) => {
         defaultSelectedKeys={[router.pathname]}
         onClick={onMenuItemClick}
       >
-        <Menu.Item key="/admin">
+        <Menu.Item key={adminPath}>
           <Icon type="dashboard" />
           <span className="nav-text">Dashboard</span>
         </Menu.Item>
 
-        <Menu.Item key="/admin/users">
+        <Menu.Item key={adminPath + '/users'}>
           <Icon type="user" />
           <span className="nav-text">Users</span>
-        </Menu.Item>
-
-        <Menu.Item key="3">
-          <Icon type="upload" />
-          <span className="nav-text">nav 3</span>
-        </Menu.Item>
-
-        <Menu.Item key="4">
-          <Icon type="user" />
-          <span className="nav-text">nav 4</span>
         </Menu.Item>
       </Menu>
 
