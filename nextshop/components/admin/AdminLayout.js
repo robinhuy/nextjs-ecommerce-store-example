@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { Layout, Breadcrumb } from 'antd';
-import { adminPath } from 'nextshop.config';
+import { adminPath } from 'app.config';
 import LeftMenu from './LeftMenu';
 
 const { Header, Content, Footer } = Layout;

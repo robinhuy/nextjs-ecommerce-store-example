@@ -1,7 +1,7 @@
 import AdminLayout from 'components/admin/AdminLayout';
 import Link from 'next/link';
 
-export default function Home() {
+export default function User() {
   const breadcrumb = [{ title: 'Users' }];
 
   return (

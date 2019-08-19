@@ -1,6 +1,6 @@
 import FrontendLayout from 'components/frontend/FrontendLayout';
 
-export default function About() {
+export default function Contact() {
   return (
     <FrontendLayout>
       <main>

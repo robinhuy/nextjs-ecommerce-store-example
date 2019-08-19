@@ -1,3 +1,4 @@
+
 /* eslint-disable */
 const withCss = require('@zeit/next-css')
 const path = require('path')
@@ -26,8 +27,9 @@ module.exports = withCss({
       })
     }
 
-    // Allow import module relative to the app root
-    config.resolve.modules.push(path.resolve('./'))
+    // Allow absolute import
+    config.resolve.alias['components'] = path.join(__dirname, 'components')
+    config.resolve.alias['app.config'] = path.join(__dirname, 'app.config.js')
 
     return config
   },

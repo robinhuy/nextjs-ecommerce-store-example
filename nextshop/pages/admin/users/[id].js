@@ -1,6 +1,6 @@
 import AdminLayout from 'components/admin/AdminLayout';
 
-export default function Home() {
+export default function UserDetail() {
   const breadcrumb = [
     { title: 'Users', path: '/users', as: '/users' },
     { title: 'User Detail' }
