@@ -10,7 +10,6 @@ export default function About() {
           </h2>
         </section>
 
-
         <section className="bgwhite p-t-66 p-b-38">
           <div className="container">
             <div className="row">

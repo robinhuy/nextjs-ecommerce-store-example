@@ -11,7 +11,7 @@ export default function AdminLayout({ breadcrumb, children }) {
 
   let BreadcrumbItems = [];
 
-  for (let item of breadcrumb) {
+  for (const item of breadcrumb) {
     BreadcrumbItems.push(
       <Breadcrumb.Item key={item.path}>
         <Link href={adminPath + item.path} as={adminPath + item.as}>
