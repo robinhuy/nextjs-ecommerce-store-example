@@ -15,7 +15,7 @@ export default function AdminLayout({ breadcrumb, children }) {
     BreadcrumbItems.push(
       <Breadcrumb.Item key={item.path}>
         <Link href={adminPath + item.path} as={adminPath + item.as}>
-          <a>{item.title}</a>
+          <a style={{ fontSize: '14px' }}>{item.title}</a>
         </Link>
       </Breadcrumb.Item>
     );
