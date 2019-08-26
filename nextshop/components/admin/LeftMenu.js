@@ -12,7 +12,7 @@ const LeftMenu = ({ router }) => {
 
   return (
     <Sider breakpoint="lg" collapsedWidth="0" style={{ minHeight: '100vh' }}>
-      <div className="admin-logo">
+      <div className="logo">
         <a href="/" target="_blank">
           NextShop Admin
         </a>
@@ -37,7 +37,7 @@ const LeftMenu = ({ router }) => {
       </Menu>
 
       <style jsx>{`
-        .admin-logo {
+        .logo {
           background: rgba(255, 255, 255, 0.2);
           height: 64px;
           font-size: 16px;
@@ -48,7 +48,7 @@ const LeftMenu = ({ router }) => {
           justify-content: center;
           align-items: center;
         }
-        .admin-logo > a {
+        .logo > a {
           color: #ffffff;
         }
       `}</style>
