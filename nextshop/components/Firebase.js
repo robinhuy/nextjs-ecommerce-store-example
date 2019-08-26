@@ -1,17 +1,35 @@
+import React, { Component } from 'react';
 import app from 'firebase/app';
 import 'firebase/auth';
+
 import { firebaseConfig } from 'app.config';
 
-class Firebase {
-  constructor() {
-    app.initializeApp(firebaseConfig);
-    this.auth = app.auth();
+const FirebaseContext = React.createContext();
+
+class Firebase extends Component {
+  constructor(props) {
+    super(props);
+
+    if (!app.apps.length) {
+      app.initializeApp(firebaseConfig);
+    }
   }
 
   signInWithEmailAndPassword = (email, password) =>
-    this.auth.signInWithEmailAndPassword(email, password);
+    app.auth().signInWithEmailAndPassword(email, password);
 
-  signOut = () => this.auth.signOut();
+  signOut = () => app.auth().signOut();
+
+  render() {
+    return (
+      <FirebaseContext.Provider value={app}>
+        {this.props.children}
+      </FirebaseContext.Provider>
+    );
+  }
 }
 
+const FirebaseConsumer = FirebaseContext.Consumer;
+
 export default Firebase;
+export { FirebaseConsumer };

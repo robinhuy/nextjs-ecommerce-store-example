@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import Router from 'next/router';
-import firebase from 'firebase/app';
-import 'firebase/auth';
-import clientCredentials from 'credentials/client';
 import { Card, Form, Icon, Input, Button, Alert } from 'antd';
+
+import { FirebaseConsumer } from 'components/Firebase';
 
 class LoginForm extends Component {
   constructor(props) {
@@ -11,26 +10,11 @@ class LoginForm extends Component {
     this.state = { isError: false, errorMessage: '' };
   }
 
-  componentDidMount() {
-    firebase.initializeApp(clientCredentials);
-
-    firebase.auth().onAuthStateChanged(function(user) {
-      if (user) {
-        console.log(user);
-      } else {
-        console.log('not sign in');
-      }
-    });
-  }
-
-  handleSubmit = e => {
-    e.preventDefault();
-
+  handleSubmit = app => {
     this.props.form.validateFields((err, values) => {
       if (!err) {
         console.log('Received values of form: ', values);
-
-        firebase
+        app
           .auth()
           .signInWithEmailAndPassword(values.email, values.password)
           .then(() => {
@@ -47,81 +31,98 @@ class LoginForm extends Component {
     const { getFieldDecorator } = this.props.form;
 
     return (
-      <div className="background">
-        <div className="wrapper">
-          <Card title="Nextshop Admin" style={{ width: 300 }}>
-            <Form onSubmit={this.handleSubmit}>
-              {this.state.isError && (
-                <Form.Item>
-                  <Alert message={this.state.errorMessage} type="error" />
-                </Form.Item>
-              )}
+      <FirebaseConsumer>
+        {app => (
+          <div className="background">
+            <div className="wrapper">
+              <Card
+                title="Nextshop Admin"
+                style={{ width: 300, textAlign: 'center' }}
+              >
+                <Form>
+                  {this.state.isError && (
+                    <Form.Item>
+                      <Alert message={this.state.errorMessage} type="error" />
+                    </Form.Item>
+                  )}
 
-              <Form.Item>
-                {getFieldDecorator('email', {
-                  rules: [
-                    { required: true, message: 'Please input your email!' }
-                  ]
-                })(
-                  <Input
-                    prefix={
-                      <Icon type="mail" style={{ color: 'rgba(0,0,0,.25)' }} />
-                    }
-                    placeholder="Email"
-                  />
-                )}
-              </Form.Item>
+                  <Form.Item>
+                    {getFieldDecorator('email', {
+                      rules: [
+                        { required: true, message: 'Please input your email!' }
+                      ]
+                    })(
+                      <Input
+                        prefix={
+                          <Icon
+                            type="mail"
+                            style={{ color: 'rgba(0,0,0,.25)' }}
+                          />
+                        }
+                        placeholder="Email"
+                      />
+                    )}
+                  </Form.Item>
 
-              <Form.Item>
-                {getFieldDecorator('password', {
-                  rules: [
-                    {
-                      min: 6,
-                      message: 'Password must be at least 6 characters long!'
-                    }
-                  ]
-                })(
-                  <Input
-                    prefix={
-                      <Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />
-                    }
-                    type="password"
-                    placeholder="Password"
-                  />
-                )}
-              </Form.Item>
+                  <Form.Item>
+                    {getFieldDecorator('password', {
+                      rules: [
+                        {
+                          min: 6,
+                          message:
+                            'Password must be at least 6 characters long!'
+                        }
+                      ]
+                    })(
+                      <Input
+                        prefix={
+                          <Icon
+                            type="lock"
+                            style={{ color: 'rgba(0,0,0,.25)' }}
+                          />
+                        }
+                        type="password"
+                        placeholder="Password"
+                      />
+                    )}
+                  </Form.Item>
 
-              <Form.Item style={{ marginBottom: 0 }}>
-                <Button
-                  type="primary"
-                  htmlType="submit"
-                  style={{ width: '100%' }}
-                >
-                  Log in
-                </Button>
+                  <Form.Item style={{ marginBottom: 0 }}>
+                    <Button
+                      type="primary"
+                      style={{ width: '100%' }}
+                      onClick={() => this.handleSubmit(app)}
+                    >
+                      Log in
+                    </Button>
 
-                <a href="" style={{ display: 'inline-block', marginTop: 10 }}>
-                  Forgot password
-                </a>
-              </Form.Item>
-            </Form>
-          </Card>
-        </div>
-
-        <style jsx>{`
-          .background {
-            min-height: 100vh;
-            background-color: #f8f8f8;
-          }
-          .wrapper {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 80vh;
-            text-align: center;
-          }
-        `}</style>
-      </div>
+                    <a href="" className="forgot-link">
+                      Forgot password
+                    </a>
+                  </Form.Item>
+                </Form>
+              </Card>
+            </div>
+            <style jsx>{`
+              .background {
+                min-height: 100vh;
+                background-color: #f8f8f8;
+              }
+              .wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 80vh;
+              }
+              .forgot-link {
+                display: block;
+                margin-top: 10px;
+                text-align: center;
+              }
+            `}</style>
+          </div>
+        )}
+      </FirebaseConsumer>
     );
   }
 }
