@@ -1,12 +1,18 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { Layout, Breadcrumb } from 'antd';
-import { adminPath } from 'app.config';
+
+import { useSelector } from 'react-redux';
+
 import LeftMenu from './LeftMenu';
 
+import { Layout, Breadcrumb, Avatar } from 'antd';
 const { Header, Content, Footer } = Layout;
 
+import { adminPath } from 'app.config';
+
 export default function AdminLayout({ breadcrumb, children }) {
+  const userEmail = useSelector(state => state.email);
+
   const lastBreadcrumbItem = breadcrumb.pop();
 
   let BreadcrumbItems = [];
@@ -34,7 +40,11 @@ export default function AdminLayout({ breadcrumb, children }) {
       <LeftMenu />
 
       <Layout>
-        <Header style={{ background: '#fff', padding: 0 }} />
+        <Header style={{ background: '#fff', padding: 0 }}>
+          <div style={{ float: 'right', paddingRight: 16 }}>
+            {userEmail} <Avatar icon="user" />
+          </div>
+        </Header>
 
         <Breadcrumb style={{ margin: '16px' }}>{BreadcrumbItems}</Breadcrumb>
 
