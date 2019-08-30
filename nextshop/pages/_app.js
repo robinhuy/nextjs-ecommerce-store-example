@@ -1,7 +1,7 @@
 import App from 'next/app';
 import React from 'react';
-import Firebase from 'components/Firebase';
-import withReduxStore from '../lib/with-redux-store';
+import Firebase from 'lib/with-firebase';
+import withReduxStore from 'lib/with-redux-store';
 import { Provider } from 'react-redux';
 
 class MyApp extends App {

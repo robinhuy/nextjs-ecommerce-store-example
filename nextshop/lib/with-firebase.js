@@ -4,7 +4,7 @@ import 'firebase/auth';
 
 import { firebaseConfig } from 'app.config';
 
-const FirebaseContext = React.createContext();
+const FirebaseContext = React.createContext(null);
 
 class Firebase extends Component {
   constructor(props) {
@@ -13,23 +13,29 @@ class Firebase extends Component {
     if (!app.apps.length) {
       app.initializeApp(firebaseConfig);
     }
+
+    this.auth = app.auth();
   }
 
   signInWithEmailAndPassword = (email, password) =>
-    app.auth().signInWithEmailAndPassword(email, password);
+    this.auth.signInWithEmailAndPassword(email, password);
 
-  signOut = () => app.auth().signOut();
+  signOut = () => this.auth.signOut();
 
   render() {
     return (
-      <FirebaseContext.Provider value={app}>
+      <FirebaseContext.Provider value={this}>
         {this.props.children}
       </FirebaseContext.Provider>
     );
   }
 }
 
-const FirebaseConsumer = FirebaseContext.Consumer;
+const withFirebase = Component => props => (
+  <FirebaseContext.Consumer>
+    {firebase => <Component {...props} firebase={firebase} />}
+  </FirebaseContext.Consumer>
+);
 
 export default Firebase;
-export { FirebaseConsumer };
+export { FirebaseContext, withFirebase };

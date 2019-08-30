@@ -5,7 +5,7 @@ const exampleInitialState = {
   lastUpdate: 0,
   light: false,
   count: 0,
-  email: 'a'
+  email: ''
 };
 
 export const actionTypes = {

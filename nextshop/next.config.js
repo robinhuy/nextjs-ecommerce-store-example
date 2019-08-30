@@ -30,6 +30,7 @@ module.exports = withCss({
     // Allow absolute import
     config.resolve.alias['components'] = path.join(__dirname, 'components')
     config.resolve.alias['store'] = path.join(__dirname, 'store')
+    config.resolve.alias['lib'] = path.join(__dirname, 'lib')
     config.resolve.alias['app.config'] = path.join(__dirname, 'app.config.js')
 
     return config
