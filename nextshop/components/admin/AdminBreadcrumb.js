@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { Breadcrumb } from 'antd';
 import { adminPath } from 'app.config';
 
-export default function AdminBreadcrumb({ breadcrumb, lastBreadcrumbItem }) {
+const AdminBreadcrumb = ({ breadcrumb, lastBreadcrumbItem }) => {
   let BreadcrumbItems = [];
 
   for (const item of breadcrumb) {
@@ -20,4 +20,6 @@ export default function AdminBreadcrumb({ breadcrumb, lastBreadcrumbItem }) {
   );
 
   return <Breadcrumb style={{ margin: '16px' }}>{BreadcrumbItems}</Breadcrumb>;
-}
+};
+
+export default AdminBreadcrumb;

@@ -1,29 +1,32 @@
 import Head from 'next/head';
-import React, { useEffect, useContext } from 'react';
+import Router from 'next/router';
+import React, { useContext, useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setEmail } from 'store/index';
 import { FirebaseContext } from 'lib/with-firebase';
 
-import { Layout, Avatar } from 'antd';
-const { Header, Content, Footer } = Layout;
+import { Layout } from 'antd';
+const { Content, Footer } = Layout;
 
 import LeftMenu from 'components/admin/LeftMenu';
 import AdminBreadcrumb from 'components/admin/AdminBreadcrumb';
+import AdminHeader from 'components/admin/AdminHeader';
 
-function AdminLayout({ breadcrumb, children }) {
+const AdminLayout = ({ breadcrumb, children }) => {
   const firebase = useContext(FirebaseContext);
 
-  const lastBreadcrumbItem = breadcrumb.pop();
+  const [userEmail, setUserEmail] = useState(useSelector(state => state.email));
+  const [lastBreadcrumbItem] = useState(breadcrumb.pop());
+  const [breadcrumbItems] = useState(breadcrumb);
 
-  let userEmail = useSelector(state => state.email);
-  const dispatch = useDispatch();
   useEffect(() => {
     if (!userEmail) {
       firebase.auth.onAuthStateChanged(user => {
         if (user && user.email) {
-          // dispatch(setEmail(user.email));
+          setUserEmail(user.email);
         } else {
-          console.log('logout');
+          setUserEmail('');
+          Router.push('/admin/login');
         }
       });
     }
@@ -38,14 +41,10 @@ function AdminLayout({ breadcrumb, children }) {
       <LeftMenu />
 
       <Layout>
-        <Header style={{ background: '#fff', padding: 0 }}>
-          <div style={{ float: 'right', paddingRight: 16 }}>
-            {userEmail} <Avatar icon="user" />
-          </div>
-        </Header>
+        <AdminHeader userEmail={userEmail} />
 
         <AdminBreadcrumb
-          breadcrumb={breadcrumb}
+          breadcrumb={breadcrumbItems}
           lastBreadcrumbItem={lastBreadcrumbItem}
         />
 
@@ -61,6 +60,6 @@ function AdminLayout({ breadcrumb, children }) {
       </Layout>
     </Layout>
   );
-}
+};
 
 export default AdminLayout;

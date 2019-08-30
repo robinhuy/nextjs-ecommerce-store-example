@@ -7,15 +7,16 @@ import { withFirebase } from 'lib/with-firebase';
 
 import { Card, Form, Icon, Input, Button, Alert } from 'antd';
 
-function LoginForm(props) {
+const LoginForm = ({ firebase, form }) => {
   const [isError, setError] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
+
   const dispatch = useDispatch();
 
   const handleLogin = () => {
-    props.form.validateFields((err, values) => {
+    form.validateFields((err, values) => {
       if (!err) {
-        props.firebase
+        firebase
           .signInWithEmailAndPassword(values.email, values.password)
           .then(account => {
             dispatch(setEmail(account.user.email));
@@ -29,7 +30,7 @@ function LoginForm(props) {
     });
   };
 
-  const { getFieldDecorator } = props.form;
+  const { getFieldDecorator } = form;
 
   return (
     <div className="background">
@@ -77,7 +78,7 @@ function LoginForm(props) {
               )}
             </Form.Item>
 
-            <Form.Item style={{ marginBottom: 0 }}>
+            <div>
               <Button
                 type="primary"
                 style={{ width: '100%' }}
@@ -89,7 +90,7 @@ function LoginForm(props) {
               <a href="" className="forgot-link">
                 Forgot password
               </a>
-            </Form.Item>
+            </div>
           </Form>
         </Card>
       </div>
@@ -106,12 +107,12 @@ function LoginForm(props) {
         }
         .forgot-link {
           display: block;
-          margin-top: 10px;
+          margin-top: 15px;
           text-align: center;
         }
       `}</style>
     </div>
   );
-}
+};
 
 export default withFirebase(Form.create()(LoginForm));
