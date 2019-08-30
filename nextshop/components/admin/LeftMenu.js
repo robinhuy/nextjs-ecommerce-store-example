@@ -1,9 +1,10 @@
 import React from 'react';
 import { withRouter } from 'next/router';
-import { Layout, Menu, Icon } from 'antd';
-import { adminPath } from 'app.config';
 
+import { Layout, Menu, Icon } from 'antd';
 const { Sider } = Layout;
+
+import { adminPath } from 'app.config';
 
 const LeftMenu = ({ router }) => {
   const onMenuItemClick = e => {

@@ -8,14 +8,16 @@ import { FirebaseContext } from 'lib/with-firebase';
 import { Layout } from 'antd';
 const { Content, Footer } = Layout;
 
-import LeftMenu from 'components/admin/LeftMenu';
-import AdminBreadcrumb from 'components/admin/AdminBreadcrumb';
 import AdminHeader from 'components/admin/AdminHeader';
+import AdminBreadcrumb from 'components/admin/AdminBreadcrumb';
+import LeftMenu from 'components/admin/LeftMenu';
 
 const AdminLayout = ({ breadcrumb, children }) => {
   const firebase = useContext(FirebaseContext);
+  const dispatch = useDispatch();
 
-  const [userEmail, setUserEmail] = useState(useSelector(state => state.email));
+  const userEmail = useSelector(state => state.email);
+
   const [lastBreadcrumbItem] = useState(breadcrumb.pop());
   const [breadcrumbItems] = useState(breadcrumb);
 
@@ -23,9 +25,9 @@ const AdminLayout = ({ breadcrumb, children }) => {
     if (!userEmail) {
       firebase.auth.onAuthStateChanged(user => {
         if (user && user.email) {
-          setUserEmail(user.email);
+          dispatch(setEmail(user.email));
         } else {
-          setUserEmail('');
+          dispatch(setEmail(''));
           Router.push('/admin/login');
         }
       });
