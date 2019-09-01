@@ -32,7 +32,7 @@ const AdminLayout = ({ breadcrumb, children }) => {
         }
       });
     }
-  });
+  }, []);
 
   return (
     <Layout>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import app from 'firebase/app';
 import 'firebase/auth';
+import 'firebase/firestore'
 
 import { firebaseConfig } from 'app.config';
 
@@ -15,12 +16,15 @@ class Firebase extends Component {
     }
 
     this.auth = app.auth();
+    this.db = app.firestore();
   }
 
   signInWithEmailAndPassword = (email, password) =>
     this.auth.signInWithEmailAndPassword(email, password);
 
   signOut = () => this.auth.signOut();
+
+  getMessages = () => this.db.collection('messages').get();
 
   render() {
     return (
