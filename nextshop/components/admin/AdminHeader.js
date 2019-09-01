@@ -1,6 +1,6 @@
 import { withFirebase } from 'lib/with-firebase';
 import { useDispatch } from 'react-redux';
-import { setEmail } from 'store/index';
+import { setEmail } from 'store/actions';
 
 import { Layout, Avatar, Menu, Dropdown, Icon } from 'antd';
 const { Header } = Layout;

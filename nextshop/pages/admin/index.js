@@ -1,6 +1,6 @@
-import AdminLayout from 'components/admin/AdminLayout';
+import { useState, useEffect } from 'react';
 import { withFirebase } from 'lib/with-firebase';
-import React, { useContext, useState, useEffect } from 'react';
+import AdminLayout from 'components/admin/AdminLayout';
 
 const Index = ({ firebase }) => {
   const breadcrumb = [{ title: 'Dashboard' }];
@@ -8,7 +8,6 @@ const Index = ({ firebase }) => {
   const [list, setList] = useState([]);
 
   useEffect(() => {
-    console.log('EFFECT');
     firebase
       .getMessages()
       .then(function(querySnapshot) {

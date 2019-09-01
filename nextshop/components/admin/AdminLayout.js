@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Router from 'next/router';
 import React, { useContext, useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { setEmail } from 'store/index';
+import { setEmail } from 'store/actions';
 import { FirebaseContext } from 'lib/with-firebase';
 
 import { Layout } from 'antd';
