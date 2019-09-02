@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { setEmail } from 'store/index';
+import { setEmail } from 'store/actions';
 
 import Router from 'next/router';
 import { withFirebase } from 'lib/with-firebase';

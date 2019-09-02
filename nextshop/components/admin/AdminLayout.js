@@ -28,7 +28,7 @@ const AdminLayout = ({ breadcrumb, children }) => {
           dispatch(setEmail(user.email));
         } else {
           dispatch(setEmail(''));
-          Router.push('/admin/login');
+          // Router.push('/admin/login');
         }
       });
     }

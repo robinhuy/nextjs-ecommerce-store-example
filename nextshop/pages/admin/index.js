@@ -9,12 +9,11 @@ const Index = ({ firebase }) => {
 
   useEffect(() => {
     firebase
-      .getMessages()
-      .then(function(querySnapshot) {
+      .getProducts()
+      .then(docs => {
         let listItems = [];
 
-        querySnapshot.forEach(function(doc) {
-          console.log(doc.id);
+        docs.forEach(function(doc) {
           listItems.push(<li key={doc.id}>{doc.id}</li>);
         });
 

@@ -26,6 +26,8 @@ class Firebase extends Component {
 
   getMessages = () => this.db.collection('messages').get();
 
+  getProducts = () => this.db.collection('products').get();
+
   render() {
     return (
       <FirebaseContext.Provider value={this}>
