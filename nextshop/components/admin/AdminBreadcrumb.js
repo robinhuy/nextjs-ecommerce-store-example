@@ -5,6 +5,14 @@ import { adminPath } from 'app.config';
 const AdminBreadcrumb = ({ breadcrumb, lastBreadcrumbItem }) => {
   let BreadcrumbItems = [];
 
+  BreadcrumbItems.push(
+    <Breadcrumb.Item key={'/'}>
+      <Link href={adminPath + '/'} as={adminPath + '/'}>
+        <a style={{ fontSize: '14px' }}>Dashboard</a>
+      </Link>
+    </Breadcrumb.Item>
+  );
+
   for (const item of breadcrumb) {
     BreadcrumbItems.push(
       <Breadcrumb.Item key={item.path}>

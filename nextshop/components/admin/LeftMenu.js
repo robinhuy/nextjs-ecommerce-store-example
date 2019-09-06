@@ -31,6 +31,11 @@ const LeftMenu = ({ router }) => {
           <span className="nav-text">Dashboard</span>
         </Menu.Item>
 
+        <Menu.Item key={adminPath + '/products'}>
+          <Icon type="shop" />
+          <span className="nav-text">Products</span>
+        </Menu.Item>
+
         <Menu.Item key={adminPath + '/users'}>
           <Icon type="user" />
           <span className="nav-text">Users</span>
