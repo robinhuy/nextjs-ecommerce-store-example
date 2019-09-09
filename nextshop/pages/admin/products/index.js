@@ -1,9 +1,10 @@
 import Router from 'next/router';
 import { useState, useEffect } from 'react';
 import { withFirebase } from 'lib/with-firebase';
-import AdminLayout from 'components/admin/AdminLayout';
 
-import { Button, Table, Divider, Tag } from 'antd';
+import { Table, Divider, Button } from 'antd';
+
+import AdminLayout from 'components/admin/AdminLayout';
 
 const Products = ({ firebase }) => {
   const breadcrumb = [{ title: 'Products' }];
@@ -74,7 +75,12 @@ const Products = ({ firebase }) => {
 
   return (
     <AdminLayout breadcrumb={breadcrumb}>
-      <Button type="primary" icon="plus" style={{ marginBottom: 15 }} onClick={goToCreateProductPage} >
+      <Button
+        type="primary"
+        icon="plus"
+        style={{ marginBottom: 15 }}
+        onClick={goToCreateProductPage}
+      >
         Create Product
       </Button>
 

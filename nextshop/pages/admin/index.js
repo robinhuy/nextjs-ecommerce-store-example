@@ -3,7 +3,7 @@ import { withFirebase } from 'lib/with-firebase';
 import AdminLayout from 'components/admin/AdminLayout';
 
 const Index = ({ firebase }) => {
-  const breadcrumb = [{ title: 'Dashboard' }];
+  const breadcrumb = [];
 
   const [list, setList] = useState([]);
 

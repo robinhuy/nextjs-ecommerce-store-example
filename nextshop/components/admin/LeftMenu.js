@@ -24,7 +24,7 @@ const LeftMenu = ({ router }) => {
         mode="inline"
         defaultSelectedKeys={[router.pathname]}
         onClick={onMenuItemClick}
-        style={{marginTop: '18px'}}
+        style={{marginTop: 18}}
       >
         <Menu.Item key={adminPath}>
           <Icon type="dashboard" />

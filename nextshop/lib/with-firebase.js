@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import app from 'firebase/app';
 import 'firebase/auth';
-import 'firebase/firestore'
+import 'firebase/firestore';
 
 import { firebaseConfig } from 'app.config';
 
@@ -27,6 +27,8 @@ class Firebase extends Component {
   getMessages = () => this.db.collection('messages').get();
 
   getProducts = () => this.db.collection('products').get();
+
+  createProduct = product => this.db.collection('products').add(product);
 
   render() {
     return (

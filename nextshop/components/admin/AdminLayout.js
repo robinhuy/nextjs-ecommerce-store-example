@@ -37,7 +37,7 @@ const AdminLayout = ({ breadcrumb, children }) => {
   return (
     <Layout>
       <Head>
-        <title>{lastBreadcrumbItem.title}</title>
+        <title>{lastBreadcrumbItem ? lastBreadcrumbItem.title : 'Dashboard'}</title>
       </Head>
 
       <LeftMenu />
