@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import app from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/firestore';
+import 'firebase/storage';
 
 import { firebaseConfig } from 'app.config';
 
@@ -17,6 +18,7 @@ class Firebase extends Component {
 
     this.auth = app.auth();
     this.db = app.firestore();
+    this.storage = app.storage();
   }
 
   signInWithEmailAndPassword = (email, password) =>
@@ -29,6 +31,8 @@ class Firebase extends Component {
   getProducts = () => this.db.collection('products').get();
 
   createProduct = product => this.db.collection('products').add(product);
+
+  uploadImages = () => {};
 
   render() {
     return (
