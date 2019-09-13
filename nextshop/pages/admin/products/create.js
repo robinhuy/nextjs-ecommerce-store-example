@@ -75,12 +75,21 @@ const Products = ({ firebase, form }) => {
   }
 
   function handleChange({ fileList, file }) {
-    console.log('change', fileList, file);
     setFileList(fileList);
   }
 
   function handleRemove(file) {
-    console.log('remove', file);
+    return firebase.storage
+      .ref()
+      .child(`images/${file.uid + file.name}`)
+      .delete()
+      .then(function() {
+        return true;
+      })
+      .catch(function(err) {
+        message.error(err.message);
+        return false;
+      });
   }
 
   function beforeUpload(file) {
@@ -92,16 +101,18 @@ const Products = ({ firebase, form }) => {
   }
 
   function uploadImage({ file, onSuccess, onError }) {
-    const time = new Date().valueOf();
     firebase.storage
-      .ref(`images/${time + file.name}`)
+      .ref(`images/${file.uid + file.name}`)
       .put(file)
       .then(function(snapshot) {
-        if (snapshot.state === 'successv') {
+        if (snapshot.state === 'success') {
           onSuccess('ok');
         } else {
           onError();
         }
+      })
+      .catch(function(err) {
+        onError(err);
       });
   }
 
@@ -164,6 +175,7 @@ const Products = ({ firebase, form }) => {
                   customRequest={uploadImage}
                   onPreview={handlePreview}
                   onChange={handleChange}
+                  onRemove={handleRemove}
                 >
                   {fileList.length >= MAX_IMAGES ? null : uploadButton}
                 </Upload>
