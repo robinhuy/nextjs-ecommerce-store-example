@@ -1,8 +1,10 @@
+import Link from 'next/link';
 import Router from 'next/router';
 import { useState, useEffect } from 'react';
 import { withFirebase } from 'lib/with-firebase';
 
-import { Table, Divider, Button, message } from 'antd';
+import { Table, Button, Modal, message } from 'antd';
+const { confirm } = Modal;
 
 import AdminLayout from 'components/admin/AdminLayout';
 
@@ -15,12 +17,22 @@ const Products = ({ firebase }) => {
     {
       title: 'Image',
       dataIndex: 'image',
-      render: image => <img src={image} alt={image} style={{ maxWidth: 200 }} />
+      render: (text, record) => (
+        <Link href={'/admin/products/[id]'} as={'/admin/products/' + record.id}>
+          <a>
+            <img src={text} alt={text} style={{ maxWidth: 200 }} />
+          </a>
+        </Link>
+      )
     },
     {
       title: 'Name',
       dataIndex: 'name',
-      render: text => <a>{text}</a>
+      render: (text, record) => (
+        <Link href={'/admin/products/[id]'} as={'/admin/products/' + record.id}>
+          <a>{text}</a>
+        </Link>
+      )
     },
     {
       title: 'Category',
@@ -42,11 +54,7 @@ const Products = ({ firebase }) => {
       title: 'Action',
       key: 'action',
       render: (text, record) => (
-        <span>
-          <a>Edit</a>
-          <Divider type="vertical" />
-          <a>Delete</a>
-        </span>
+        <a onClick={() => deleteProduct(record)}>Delete</a>
       )
     }
   ];
@@ -64,6 +72,26 @@ const Products = ({ firebase }) => {
 
   function goToCreateProductPage() {
     Router.push('/admin/products/create');
+  }
+
+  function deleteProduct(product) {
+    confirm({
+      title: 'Delete Data',
+      content: `You may be deleting product ${product.name}. After you delete this, it can't be recovered.`,
+      onOk() {
+        firebase
+          .deleteProduct(product.id)
+          .then(() => {
+            setProducts(products.filter(item => item.id != product.id));
+
+            //TODO: remove images
+            message.success('Delete product successfully');
+          })
+          .catch(err => {
+            message.error(err.message);
+          });
+      }
+    });
   }
 
   return (

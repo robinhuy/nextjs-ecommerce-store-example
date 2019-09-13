@@ -33,6 +33,12 @@ class Firebase extends Component {
     return this.db.collection('products').add(product);
   };
 
+  deleteProduct = id =>
+    this.db
+      .collection('products')
+      .doc(id)
+      .delete();
+
   getProducts = () =>
     this.db
       .collection('products')
@@ -45,6 +51,7 @@ class Firebase extends Component {
         docs.forEach(function(doc) {
           let data = doc.data();
           data.key = doc.id;
+          data.id = doc.id;
           data.image = '';
 
           if (data.imageURLs && data.imageURLs.length > 0) {
