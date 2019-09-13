@@ -2,7 +2,7 @@ import Router from 'next/router';
 import { useState, useEffect } from 'react';
 import { withFirebase } from 'lib/with-firebase';
 
-import { Table, Divider, Button } from 'antd';
+import { Table, Divider, Button, message } from 'antd';
 
 import AdminLayout from 'components/admin/AdminLayout';
 
@@ -14,7 +14,8 @@ const Products = ({ firebase }) => {
   const columns = [
     {
       title: 'Image',
-      dataIndex: 'image'
+      dataIndex: 'image',
+      render: image => <img src={image} alt={image} style={{maxWidth: 200}} />
     },
     {
       title: 'Name',
@@ -59,13 +60,19 @@ const Products = ({ firebase }) => {
         docs.forEach(function(doc) {
           let data = doc.data();
           data.key = doc.id;
+          data.image = '';
+
+          if (data.imageURLs && data.imageURLs.length > 0) {
+            data.image = data.imageURLs[0];
+          }
+
           listProducts.push(data);
         });
 
         setProducts(listProducts);
       })
       .catch(error => {
-        console.log(error.message);
+        message.error(error.message);
       });
   }, []);
 

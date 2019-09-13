@@ -1,5 +1,5 @@
 import Router from 'next/router';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { withFirebase } from 'lib/with-firebase';
 
 import {
@@ -44,52 +44,38 @@ const Products = ({ firebase, form }) => {
   const { getFieldDecorator } = form;
 
   function createProduct() {
-    form.validateFields((err, values) => {
+    form.validateFields((err, product) => {
       if (!err) {
-        firebase
-          .createProduct(values)
-          .then(result => {
-            console.log(result);
-            // dispatch(setEmail(account.user.email));
-            // Router.push('/admin');
-          })
-          .catch(error => {
-            // setError(true);
-            // setErrorMessage(error.message);
-          });
+        const images = product.images.fileList.map(
+          file => `images/${file.uid + file.name}`
+        );
+        product.images = images;
+
+        let getImagesURL = [];
+
+        for (const img of images) {
+          getImagesURL.push(
+            firebase.storage
+              .ref()
+              .child(img)
+              .getDownloadURL()
+          );
+        }
+
+        Promise.all(getImagesURL).then(function(urls) {
+          product.imageURLs = urls;
+
+          firebase
+            .createProduct(product)
+            .then(result => {
+              Router.push('/admin/products');
+            })
+            .catch(error => {
+              message.error(err.message);
+            });
+        });
       }
     });
-  }
-
-  function handleCancel() {
-    setPreviewVisible(false);
-  }
-
-  async function handlePreview(file) {
-    if (!file.url && !file.preview) {
-      file.preview = await getBase64(file.originFileObj);
-    }
-
-    setPreviewImage(file.url || file.preview);
-    setPreviewVisible(true);
-  }
-
-  function handleChange({ fileList, file }) {
-    setFileList(fileList);
-  }
-
-  function handleRemove(file) {
-    return firebase.storage
-      .ref()
-      .child(`images/${file.uid + file.name}`)
-      .delete()
-      .then(function() {
-        return true;
-      })
-      .catch(function(err) {
-        message.error(err.message);
-        return false;
-      });
   }
 
   function beforeUpload(file) {
@@ -114,6 +100,37 @@ const Products = ({ firebase, form }) => {
       .catch(function(err) {
         onError(err);
       });
+  }
+
+  function handleChange({ fileList, file }) {
+    setFileList(fileList);
+  }
+
+  function handleRemove(file) {
+    return firebase.storage
+      .ref()
+      .child(`images/${file.uid + file.name}`)
+      .delete()
+      .then(function() {
+        return true;
+      })
+      .catch(function(err) {
+        message.error(err.message);
+        return false;
+      });
+  }
+
+  async function handlePreview(file) {
+    if (!file.url && !file.preview) {
+      file.preview = await getBase64(file.originFileObj);
+    }
+
+    setPreviewImage(file.url || file.preview);
+    setPreviewVisible(true);
+  }
+
+  function handleCancel() {
+    setPreviewVisible(false);
   }
 
   const uploadButton = (
