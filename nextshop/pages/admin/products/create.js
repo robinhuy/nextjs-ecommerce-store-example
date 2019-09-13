@@ -51,29 +51,28 @@ const Products = ({ firebase, form }) => {
         );
         product.images = images;
 
-        let getImagesURL = [];
+        let getImageURLs = [];
 
         for (const img of images) {
-          getImagesURL.push(
-            firebase.storage
-              .ref()
-              .child(img)
-              .getDownloadURL()
-          );
+          getImageURLs.push(firebase.getFileDownloadURL(img));
         }
 
-        Promise.all(getImagesURL).then(function(urls) {
-          product.imageURLs = urls;
+        Promise.all(getImageURLs)
+          .then(urls => {
+            product.imageURLs = urls;
 
-          firebase
-            .createProduct(product)
-            .then(result => {
-              Router.push('/admin/products');
-            })
-            .catch(error => {
-              message.error(err.message);
-            });
-        });
+            firebase
+              .createProduct(product)
+              .then(() => {
+                Router.push('/admin/products');
+              })
+              .catch(err => {
+                message.error(err.message);
+              });
+          })
+          .catch(err => {
+            console.log(err);
+          });
       }
     });
   }
@@ -87,9 +86,8 @@ const Products = ({ firebase, form }) => {
   }
 
   function uploadImage({ file, onSuccess, onError }) {
-    firebase.storage
-      .ref(`images/${file.uid + file.name}`)
-      .put(file)
+    firebase
+      .uploadImages(file)
       .then(function(snapshot) {
         if (snapshot.state === 'success') {
           onSuccess('ok');

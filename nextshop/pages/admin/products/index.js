@@ -15,7 +15,7 @@ const Products = ({ firebase }) => {
     {
       title: 'Image',
       dataIndex: 'image',
-      render: image => <img src={image} alt={image} style={{maxWidth: 200}} />
+      render: image => <img src={image} alt={image} style={{ maxWidth: 200 }} />
     },
     {
       title: 'Name',
@@ -54,22 +54,8 @@ const Products = ({ firebase }) => {
   useEffect(() => {
     firebase
       .getProducts()
-      .then(docs => {
-        let listProducts = [];
-
-        docs.forEach(function(doc) {
-          let data = doc.data();
-          data.key = doc.id;
-          data.image = '';
-
-          if (data.imageURLs && data.imageURLs.length > 0) {
-            data.image = data.imageURLs[0];
-          }
-
-          listProducts.push(data);
-        });
-
-        setProducts(listProducts);
+      .then(products => {
+        setProducts(products);
       })
       .catch(error => {
         message.error(error.message);

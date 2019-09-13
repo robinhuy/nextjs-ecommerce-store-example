@@ -28,11 +28,43 @@ class Firebase extends Component {
 
   getMessages = () => this.db.collection('messages').get();
 
-  getProducts = () => this.db.collection('products').get();
+  createProduct = product => {
+    product.created_at = new Date().valueOf();
+    return this.db.collection('products').add(product);
+  };
 
-  createProduct = product => this.db.collection('products').add(product);
+  getProducts = () =>
+    this.db
+      .collection('products')
+      .orderBy('created_at', 'desc')
+      .get()
+      .then(docs => {
+        console.log(docs);
+        let listProducts = [];
 
-  uploadImages = () => {};
+        docs.forEach(function(doc) {
+          let data = doc.data();
+          data.key = doc.id;
+          data.image = '';
+
+          if (data.imageURLs && data.imageURLs.length > 0) {
+            data.image = data.imageURLs[0];
+          }
+
+          listProducts.push(data);
+        });
+
+        return listProducts;
+      });
+
+  uploadImages = file =>
+    this.storage.ref(`images/${file.uid + file.name}`).put(file);
+
+  getFileDownloadURL = url =>
+    this.storage
+      .ref()
+      .child(url)
+      .getDownloadURL();
 
   render() {
     return (
