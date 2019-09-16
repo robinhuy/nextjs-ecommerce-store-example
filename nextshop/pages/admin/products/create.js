@@ -2,6 +2,8 @@ import Router from 'next/router';
 import { useState } from 'react';
 import { withFirebase } from 'lib/with-firebase';
 
+import AdminLayout from 'components/admin/AdminLayout';
+
 import {
   Row,
   Col,
@@ -15,8 +17,6 @@ import {
   message
 } from 'antd';
 const { Option } = Select;
-
-import AdminLayout from 'components/admin/AdminLayout';
 
 const MAX_IMAGES = 4;
 
@@ -152,7 +152,7 @@ const Products = ({ firebase, form }) => {
             <Form.Item label="Price">
               {getFieldDecorator('price', {
                 rules: [{ required: true, message: 'Please input Price!' }]
-              })(<Input />)}
+              })(<Input type="number" />)}
             </Form.Item>
           </Col>
 
@@ -160,7 +160,7 @@ const Products = ({ firebase, form }) => {
             <Form.Item label="Quantity">
               {getFieldDecorator('quantity', {
                 rules: [{ required: true, message: 'Please input Quantity!' }]
-              })(<Input />)}
+              })(<Input type="number" />)}
             </Form.Item>
 
             <Form.Item label="Status">

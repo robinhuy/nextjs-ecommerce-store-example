@@ -45,7 +45,6 @@ class Firebase extends Component {
       .orderBy('created_at', 'desc')
       .get()
       .then(docs => {
-        console.log(docs);
         let listProducts = [];
 
         docs.forEach(function(doc) {
