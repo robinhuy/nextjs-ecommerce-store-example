@@ -1,13 +1,16 @@
 import Link from 'next/link';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebookF, faInstagram, faPinterestP, faYoutube } from '@fortawesome/free-brands-svg-icons'
+
 export default function Footer() {
   return (
     <footer className="bg6 p-t-45 p-b-43 p-l-45 p-r-45">
-      <div className="flex-w p-b-90">
+      <div className="flex-w">
         <div className="w-size6 p-t-30 p-l-15 p-r-15 respon3">
           <h4 className="s-text12 p-b-30">
             GET IN TOUCH
-				</h4>
+				  </h4>
 
           <div>
             <p className="s-text7 w-size27">
@@ -15,11 +18,19 @@ export default function Footer() {
 					</p>
 
             <div className="flex-m p-t-30">
-              <a href="#" className="fs-18 color1 p-r-20 fa fa-facebook"></a>
-              <a href="#" className="fs-18 color1 p-r-20 fa fa-instagram"></a>
-              <a href="#" className="fs-18 color1 p-r-20 fa fa-pinterest-p"></a>
-              <a href="#" className="fs-18 color1 p-r-20 fa fa-snapchat-ghost"></a>
-              <a href="#" className="fs-18 color1 p-r-20 fa fa-youtube-play"></a>
+
+              <a href="#" className="fs-18 color1 p-r-20">
+                <FontAwesomeIcon icon={faFacebookF} />
+              </a>
+              <a href="#" className="fs-18 color1 p-r-20">
+                <FontAwesomeIcon icon={faInstagram} />
+              </a>
+              <a href="#" className="fs-18 color1 p-r-20">
+                <FontAwesomeIcon icon={faPinterestP} />
+              </a>
+              <a href="#" className="fs-18 color1 p-r-20">
+                <FontAwesomeIcon icon={faYoutube} />
+              </a>
             </div>
           </div>
         </div>
@@ -141,31 +152,6 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="t-center p-l-15 p-r-15">
-        <a href="#">
-          <img className="h-size2" src="/static/images/icons/paypal.png" alt="IMG-PAYPAL" />
-        </a>
-
-        <a href="#">
-          <img className="h-size2" src="/static/images/icons/visa.png" alt="IMG-VISA" />
-        </a>
-
-        <a href="#">
-          <img className="h-size2" src="/static/images/icons/mastercard.png" alt="IMG-MASTERCARD" />
-        </a>
-
-        <a href="#">
-          <img className="h-size2" src="/static/images/icons/express.png" alt="IMG-EXPRESS" />
-        </a>
-
-        <a href="#">
-          <img className="h-size2" src="/static/images/icons/discover.png" alt="IMG-DISCOVER" />
-        </a>
-
-        <div className="t-center s-text8 p-t-20">
-          Copyright © 2018 All rights reserved. | This template is made with <i className="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-        </div>
-      </div>
     </footer>
   )
 }

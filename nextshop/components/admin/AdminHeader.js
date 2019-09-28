@@ -1,3 +1,4 @@
+import Router from 'next/router';
 import { withFirebase } from 'lib/with-firebase';
 import { useDispatch } from 'react-redux';
 import { setEmail } from 'store/actions';
@@ -11,6 +12,7 @@ const AdminHeader = ({ firebase, userEmail }) => {
   const handleSignOut = () => {
     firebase.signOut();
     dispatch(setEmail(''));
+    Router.push('/admin/login');
   }
 
   const menu = (
