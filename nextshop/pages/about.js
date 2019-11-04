@@ -4,7 +4,7 @@ export default function About() {
   return (
     <FrontendLayout>
       <main>
-        <section className="bg-title-page p-t-40 p-b-50 flex-col-c-m" style={{ backgroundImage: 'url(/static/images/heading-pages-06.jpg)' }}>
+        <section className="bg-title-page p-t-40 p-b-50 flex-col-c-m" style={{ backgroundImage: 'url(/images/heading-pages-06.jpg)' }}>
           <h2 className="l-text2 t-center">
             About
           </h2>
@@ -15,7 +15,7 @@ export default function About() {
             <div className="row">
               <div className="col-md-4 p-b-30">
                 <div className="hov-img-zoom">
-                  <img src="/static/images/banner-14.jpg" alt="IMG-ABOUT" />
+                  <img src="/images/banner-14.jpg" alt="IMG-ABOUT" />
                 </div>
               </div>
 

@@ -6,7 +6,7 @@ export default function Contact() {
       <main>
         <section
           className="bg-title-page p-t-40 p-b-50 flex-col-c-m"
-          style={{ backgroundImage: 'url(/static/imagesheading-pages-06.jpg)' }}
+          style={{ backgroundImage: 'url(/imagesheading-pages-06.jpg)' }}
         >
           <h2 className="l-text2 t-center">Contact</h2>
         </section>
@@ -21,7 +21,7 @@ export default function Contact() {
                     id="google_map"
                     data-map-x="40.614439"
                     data-map-y="-73.926781"
-                    data-pin="/static/imagesicons/icon-position-map.png"
+                    data-pin="/imagesicons/icon-position-map.png"
                     data-scrollwhell={0}
                     data-draggable={1}
                   />

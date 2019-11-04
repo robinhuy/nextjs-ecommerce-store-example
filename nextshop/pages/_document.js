@@ -10,7 +10,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <link rel="icon" type="image/x-icon" href="/static/images/icons/favicon.png" />
+          <link rel="icon" type="image/x-icon" href="/images/icons/favicon.png" />
         </Head>
         <body>
           <Main />

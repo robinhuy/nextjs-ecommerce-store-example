@@ -37,7 +37,7 @@ const Home = props => {
               <div className="col-sm-10 col-md-8 col-lg-4 m-l-r-auto">
 
                 <div className="block1 hov-img-zoom pos-relative m-b-30">
-                  <img src="/static/images/banner-02.jpg" alt="IMG-BENNER" />
+                  <img src="/images/banner-02.jpg" alt="IMG-BENNER" />
 
                   <div className="block1-wrapbtn w-size2">
 
@@ -49,7 +49,7 @@ const Home = props => {
 
 
                 <div className="block1 hov-img-zoom pos-relative m-b-30">
-                  <img src="/static/images/banner-05.jpg" alt="IMG-BENNER" />
+                  <img src="/images/banner-05.jpg" alt="IMG-BENNER" />
 
                   <div className="block1-wrapbtn w-size2">
 
@@ -63,7 +63,7 @@ const Home = props => {
               <div className="col-sm-10 col-md-8 col-lg-4 m-l-r-auto">
 
                 <div className="block1 hov-img-zoom pos-relative m-b-30">
-                  <img src="/static/images/banner-03.jpg" alt="IMG-BENNER" />
+                  <img src="/images/banner-03.jpg" alt="IMG-BENNER" />
 
                   <div className="block1-wrapbtn w-size2">
 
@@ -75,7 +75,7 @@ const Home = props => {
 
 
                 <div className="block1 hov-img-zoom pos-relative m-b-30">
-                  <img src="/static/images/banner-07.jpg" alt="IMG-BENNER" />
+                  <img src="/images/banner-07.jpg" alt="IMG-BENNER" />
 
                   <div className="block1-wrapbtn w-size2">
 
@@ -89,7 +89,7 @@ const Home = props => {
               <div className="col-sm-10 col-md-8 col-lg-4 m-l-r-auto">
 
                 <div className="block1 hov-img-zoom pos-relative m-b-30">
-                  <img src="/static/images/banner-04.jpg" alt="IMG-BENNER" />
+                  <img src="/images/banner-04.jpg" alt="IMG-BENNER" />
 
                   <div className="block1-wrapbtn w-size2">
 
@@ -100,7 +100,7 @@ const Home = props => {
                 </div>
 
                 <div className="block2 wrap-pic-w pos-relative m-b-30">
-                  <img src="/static/images/icons/bg-01.jpg" alt="IMG" />
+                  <img src="/images/icons/bg-01.jpg" alt="IMG" />
 
                   <div className="block2-content sizefull ab-t-l flex-col-c-m">
                     <h4 className="m-text4 t-center w-size3 p-b-8">
@@ -138,7 +138,7 @@ const Home = props => {
 
                   <div className="block2">
                     <div className="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
-                      <img src="/static/images/item-02.jpg" alt="IMG-PRODUCT" />
+                      <img src="/images/item-02.jpg" alt="IMG-PRODUCT" />
 
                       <div className="block2-overlay trans-0-4">
                         <a href="#" className="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -171,7 +171,7 @@ const Home = props => {
 
                   <div className="block2">
                     <div className="block2-img wrap-pic-w of-hidden pos-relative">
-                      <img src="/static/images/item-03.jpg" alt="IMG-PRODUCT" />
+                      <img src="/images/item-03.jpg" alt="IMG-PRODUCT" />
 
                       <div className="block2-overlay trans-0-4">
                         <a href="#" className="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -204,7 +204,7 @@ const Home = props => {
 
                   <div className="block2">
                     <div className="block2-img wrap-pic-w of-hidden pos-relative">
-                      <img src="/static/images/item-05.jpg" alt="IMG-PRODUCT" />
+                      <img src="/images/item-05.jpg" alt="IMG-PRODUCT" />
 
                       <div className="block2-overlay trans-0-4">
                         <a href="#" className="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -237,7 +237,7 @@ const Home = props => {
 
                   <div className="block2">
                     <div className="block2-img wrap-pic-w of-hidden pos-relative block2-labelsale">
-                      <img src="/static/images/item-07.jpg" alt="IMG-PRODUCT" />
+                      <img src="/images/item-07.jpg" alt="IMG-PRODUCT" />
 
                       <div className="block2-overlay trans-0-4">
                         <a href="#" className="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -274,7 +274,7 @@ const Home = props => {
 
                   <div className="block2">
                     <div className="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
-                      <img src="/static/images/item-02.jpg" alt="IMG-PRODUCT" />
+                      <img src="/images/item-02.jpg" alt="IMG-PRODUCT" />
 
                       <div className="block2-overlay trans-0-4">
                         <a href="#" className="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -307,7 +307,7 @@ const Home = props => {
 
                   <div className="block2">
                     <div className="block2-img wrap-pic-w of-hidden pos-relative">
-                      <img src="/static/images/item-03.jpg" alt="IMG-PRODUCT" />
+                      <img src="/images/item-03.jpg" alt="IMG-PRODUCT" />
 
                       <div className="block2-overlay trans-0-4">
                         <a href="#" className="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -340,7 +340,7 @@ const Home = props => {
 
                   <div className="block2">
                     <div className="block2-img wrap-pic-w of-hidden pos-relative">
-                      <img src="/static/images/item-05.jpg" alt="IMG-PRODUCT" />
+                      <img src="/images/item-05.jpg" alt="IMG-PRODUCT" />
 
                       <div className="block2-overlay trans-0-4">
                         <a href="#" className="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -373,7 +373,7 @@ const Home = props => {
 
                   <div className="block2">
                     <div className="block2-img wrap-pic-w of-hidden pos-relative block2-labelsale">
-                      <img src="/static/images/item-07.jpg" alt="IMG-PRODUCT" />
+                      <img src="/images/item-07.jpg" alt="IMG-PRODUCT" />
 
                       <div className="block2-overlay trans-0-4">
                         <a href="#" className="block2-btn-addwishlist hov-pointer trans-0-4">

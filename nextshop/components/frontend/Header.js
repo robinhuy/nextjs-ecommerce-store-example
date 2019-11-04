@@ -32,7 +32,7 @@ export default function Header() {
         <div className="wrap_header">
           <Link href="/" as="/">
             <a className="logo">
-              <img src="/static/images/icons/logo.png" alt="IMG-LOGO" />
+              <img src="/images/icons/logo.png" alt="IMG-LOGO" />
             </a>
           </Link>
 
@@ -45,7 +45,7 @@ export default function Header() {
           <div className="header-icons">
             <a href="#" className="header-wrapicon1 dis-block">
               <img
-                src="/static/images/icons/icon-header-01.png"
+                src="/images/icons/icon-header-01.png"
                 className="header-icon1"
                 alt="ICON"
               />
@@ -55,7 +55,7 @@ export default function Header() {
 
             <div className="header-wrapicon2">
               <img
-                src="/static/images/icons/icon-header-02.png"
+                src="/images/icons/icon-header-02.png"
                 className="header-icon1 js-show-header-dropdown"
                 alt="ICON"
               />
@@ -65,7 +65,7 @@ export default function Header() {
                 <ul className="header-cart-wrapitem">
                   <li className="header-cart-item">
                     <div className="header-cart-item-img">
-                      <img src="/static/images/item-cart-01.jpg" alt="Cart" />
+                      <img src="/images/item-cart-01.jpg" alt="Cart" />
                     </div>
 
                     <div className="header-cart-item-txt">
@@ -79,7 +79,7 @@ export default function Header() {
 
                   <li className="header-cart-item">
                     <div className="header-cart-item-img">
-                      <img src="/static/images/item-cart-02.jpg" alt="Cart" />
+                      <img src="/images/item-cart-02.jpg" alt="Cart" />
                     </div>
 
                     <div className="header-cart-item-txt">
@@ -93,7 +93,7 @@ export default function Header() {
 
                   <li className="header-cart-item">
                     <div className="header-cart-item-img">
-                      <img src="/static/images/item-cart-03.jpg" alt="Cart" />
+                      <img src="/images/item-cart-03.jpg" alt="Cart" />
                     </div>
 
                     <div className="header-cart-item-txt">
@@ -136,7 +136,7 @@ export default function Header() {
       <div className="wrap_header_mobile">
         <Link href="/" as="/">
           <a className="logo-mobile">
-            <img src="/static/images/icons/logo.png" alt="IMG-LOGO" />
+            <img src="/images/icons/logo.png" alt="IMG-LOGO" />
           </a>
         </Link>
 
@@ -144,7 +144,7 @@ export default function Header() {
           <div className="header-icons-mobile">
             <a href="#" className="header-wrapicon1 dis-block">
               <img
-                src="/static/images/icons/icon-header-01.png"
+                src="/images/icons/icon-header-01.png"
                 className="header-icon1"
                 alt="ICON"
               />
@@ -154,7 +154,7 @@ export default function Header() {
 
             <div className="header-wrapicon2">
               <img
-                src="/static/images/icons/icon-header-02.png"
+                src="/images/icons/icon-header-02.png"
                 className="header-icon1 js-show-header-dropdown"
                 alt="ICON"
               />
@@ -164,7 +164,7 @@ export default function Header() {
                 <ul className="header-cart-wrapitem">
                   <li className="header-cart-item">
                     <div className="header-cart-item-img">
-                      <img src="/static/images/item-cart-01.jpg" alt="Cart" />
+                      <img src="/images/item-cart-01.jpg" alt="Cart" />
                     </div>
 
                     <div className="header-cart-item-txt">
@@ -178,7 +178,7 @@ export default function Header() {
 
                   <li className="header-cart-item">
                     <div className="header-cart-item-img">
-                      <img src="/static/images/item-cart-02.jpg" alt="Cart" />
+                      <img src="/images/item-cart-02.jpg" alt="Cart" />
                     </div>
 
                     <div className="header-cart-item-txt">
@@ -192,7 +192,7 @@ export default function Header() {
 
                   <li className="header-cart-item">
                     <div className="header-cart-item-img">
-                      <img src="/static/images/item-cart-03.jpg" alt="Cart" />
+                      <img src="/images/item-cart-03.jpg" alt="Cart" />
                     </div>
 
                     <div className="header-cart-item-txt">
