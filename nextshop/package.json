@@ -32,7 +32,7 @@
     "express": "^4.17.1",
     "firebase": "^6.6.2",
     "isomorphic-unfetch": "^3.0.0",
-    "next": "^9.1.2",
+    "next": "^9.3.2",
     "null-loader": "^3.0.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
